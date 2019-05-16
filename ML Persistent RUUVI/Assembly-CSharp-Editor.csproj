@@ -335,6 +335,9 @@
     <Reference Include="MSA.Editor">
       <HintPath>C:/Users/samer.boules/Documents/GitHub/Harbour/ML Persistent RUUVI/Assets/MagicLeap/Soundfield/Editor/MSA.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Triangle">
+      <HintPath>C:/Users/samer.boules/Documents/GitHub/Harbour/ML Persistent RUUVI/Assets/scripts/Triangle.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/samer.boules/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
