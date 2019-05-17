@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SPREADER
   - CONTAINER_HOLDER
+  - CONTAINER
+  - CONTAINER_COLOR
+  - CONTAINER_MODEL
   layers:
   - Default
   - TransparentFX

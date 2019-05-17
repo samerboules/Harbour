@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d638e45789e6724595823993cf5d988
+guid: 081a17552ffc77f43a3ed52dfb8d3f51
 SketchUpImporter:
   generateBackFace: 0
   mergeCoplanarFaces: 0
@@ -21,7 +21,7 @@ SketchUpImporter:
       orthoSize: 1
       isPerspective: 1
     scenes: []
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Chris
     100002: Chris 1
@@ -447,6 +447,8 @@ SketchUpImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
