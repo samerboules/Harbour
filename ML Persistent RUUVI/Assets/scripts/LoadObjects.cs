@@ -678,10 +678,12 @@ public class LoadObjects : MonoBehaviour {
         if (renderObject.objectType == ObjectType.QC ||
             renderObject.objectType == ObjectType.AUTOSTRAD)
         {
+            /*SAMER
             var cam = newObject.GetComponentInChildren<Camera>();
             var cycler = FindObjectOfType<CameraCycler>();
             cam.name = CameraCycler.CamNamePrefix + renderObject.id;
             cycler.AddCamera(cam);
+            */
         }
 
         lock (lockArray)
