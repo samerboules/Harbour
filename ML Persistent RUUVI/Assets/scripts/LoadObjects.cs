@@ -15,9 +15,9 @@ public class LoadObjects : MonoBehaviour {
     private bool connected = false;
     private bool drawClaims = true;
     private bool updatedStatus = false;
+    private Transform rootObject;
 
     private readonly System.Object lockArray = new System.Object();
-    private readonly System.Object lockStaticArray = new System.Object();
 
     private Dictionary<string, RenderObject> objectList = new Dictionary<string, RenderObject>();
     private ConcurrentDictionary<string, string> statusList = new ConcurrentDictionary<string, string>();
@@ -25,6 +25,7 @@ public class LoadObjects : MonoBehaviour {
     void Start()
     {
         Application.runInBackground = true;
+        rootObject = GameObject.Find("TerminalVisualization").transform;
     }
 
     void Update () {
@@ -245,6 +246,9 @@ public class LoadObjects : MonoBehaviour {
             case MessageType.SPREADER:
                 HandleSpreaderMessage(JsonUtility.FromJson<JsonMessage<JsonSpreaderMessage>>(msg).content);
                 break;
+            case MessageType.SPREADER_SIZE:
+                HandleSpreaderSizeMessage(JsonUtility.FromJson<JsonMessage<JsonSpreaderSizeMessage>>(msg).content);
+                break;
             case MessageType.PICKUP:
                 HandlePickupMessage(JsonUtility.FromJson<JsonMessage<JsonPickupMessage>>(msg).content);
                 break;
@@ -339,9 +343,7 @@ public class LoadObjects : MonoBehaviour {
         RenderObject renderObject;
         if (objectList.TryGetValue(msg.equipId, out renderObject) && renderObject.hasSpreader)
         {
-            SpreaderType spreaderType = (SpreaderType)Enum.Parse(typeof(SpreaderType), msg.spreaderSize);
             renderObject.spreader.spreaderContentUpdate = true;
-            renderObject.spreader.spreaderType = spreaderType;
             renderObject.spreader.spreaderContents = msg.containerId;
         }
     }
@@ -352,7 +354,7 @@ public class LoadObjects : MonoBehaviour {
         if (objectList.TryGetValue(msg.equipId, out renderObject) && renderObject.hasSpreader)
         {
             renderObject.spreader.spreaderContentUpdate = true;
-            renderObject.spreader.spreaderType = SpreaderType.SPREADER_EMPTY;
+            renderObject.spreader.spreaderContents = "";
         }
     }
 
@@ -372,6 +374,26 @@ public class LoadObjects : MonoBehaviour {
         Vector3 position = new Vector3(msg.x, msg.y, msg.z).ToLocal();
         renderObject.spreader.desiredTransform.moveSpeed = Vector3.Distance(renderObject.spreader.desiredTransform.position, position) / (msg.dt * .001f);
         renderObject.spreader.desiredTransform.position = position;
+    }
+
+    private void HandleSpreaderSizeMessage(JsonSpreaderSizeMessage msg)
+    {
+        RenderObject renderObject;
+        if (!objectList.TryGetValue(msg.equipId, out renderObject))
+        {
+            return;
+        }
+
+        if (!renderObject.hasSpreader)
+        {
+            return;
+        }
+
+        SpreaderSize spreaderSize = (SpreaderSize)Enum.Parse(typeof(SpreaderSize), msg.spreaderSize);
+
+        renderObject.spreader.spreaderSizeUpdate = true;
+        renderObject.spreader.desiredSpreaderSize = spreaderSize;
+        renderObject.spreader.deltaTime = msg.dt * .001f;
     }
 
     private void AddNewObject(JsonUpdateMessage jsonObject)
@@ -394,26 +416,7 @@ public class LoadObjects : MonoBehaviour {
             color = GetColorFromLong(ContainerColorer.GetHexColorFromPrefix(jsonObject.id.Substring(0, 4))); 
         }
 
-        if (jsonObject.type == "CONTAINER")
-        {
-            // For now, magenta containers
-            color = Color.magenta;
-
-            if (jsonObject.l < 9)
-            {
-                jsonObject.type = ObjectType.CONTAINER_20.ToString();
-                scale = new Vector3(jsonObject.l / 6.058f, jsonObject.h / 2.591f, jsonObject.w / 2.438f).ToMeter();       
-            }
-            else
-            {
-                jsonObject.type = ObjectType.CONTAINER_40.ToString();
-                scale = new Vector3(jsonObject.l / 12.192f, jsonObject.h / 2.591f, jsonObject.w / 2.438f).ToMeter();
-            }
-        }
-        else
-        {
-            scale = new Vector3(jsonObject.l, jsonObject.h, jsonObject.w).ToMeter();
-        }
+        scale = new Vector3(jsonObject.l, jsonObject.h, jsonObject.w).ToMeter();
 
         if (scale.magnitude < 1)
             scale = Vector3.one;
@@ -469,7 +472,7 @@ public class LoadObjects : MonoBehaviour {
     {
         bool timeReached = false;
         // 5ms seems to be enough to render multiple objects at the same time, but not inhibit movement too much
-        int maxTimeInMilliseconds = 5; 
+        int maxTimeInMilliseconds = 5;
         var timer = new Timer(state => timeReached = true, new object(), maxTimeInMilliseconds, -1);
         foreach (var objectToUpdate in GetObjectList())
         {
@@ -485,7 +488,6 @@ public class LoadObjects : MonoBehaviour {
             {
                 if (objectToUpdate.transform != null)
                 {
-                    FindObjectOfType<CameraCycler>().RemoveCamera(objectToUpdate.transform);
                     Destroy(objectToUpdate.transform.gameObject);
                 }
 
@@ -498,80 +500,14 @@ public class LoadObjects : MonoBehaviour {
                 InstantiateNewObject(objectToUpdate.id);
             }
 
-            if (objectToUpdate.transform == null)
+            if (objectToUpdate.transform == null || objectToUpdate.IsContainer())
                 continue;
 
-            if (objectToUpdate.transform.parent != null)
-                continue;
-
-            if (objectToUpdate.hasSpreader && objectToUpdate.spreader.spreaderContentUpdate)
-            {
-                objectToUpdate.spreader.spreaderContentUpdate = false;
-                SetSpreader(objectToUpdate.transform, objectToUpdate.spreader.spreaderType, objectToUpdate.spreader.spreaderContents);
-            }
-
-            if (objectToUpdate.hasSpreader && objectToUpdate.spreader.desiredTransform.moveSpeed != 0f)
-            {
-                Transform trolley = objectToUpdate.transform.GetChild(0).GetChild(0);
-                Transform spreader = trolley.GetChild(0).GetChild(0);
-
-                switch (objectToUpdate.objectType)
-                {
-                    case ObjectType.ASC:
-                    case ObjectType.QC:
-                        UpdateCraneSpreader(objectToUpdate.spreader.desiredTransform, trolley, spreader);
-                        break;
-                    case ObjectType.AUTOSTRAD:
-                        UpdateAutoStradSpreader(objectToUpdate.spreader.desiredTransform, spreader);
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            var currentPosition = objectToUpdate.transform.position;
-            var desiredPosition = objectToUpdate.desiredTransform.position;
-
-            if (currentPosition != desiredPosition)
-            {
-                float maxMoveDistance = objectToUpdate.desiredTransform.moveSpeed * Time.deltaTime;
-                if (maxMoveDistance == 0f)
-                { // move like The Flash, because at zero speed it will never reach its desired position and just keep eating CPU
-                    maxMoveDistance = 30f * Time.deltaTime;
-                }
-
-                if (objectToUpdate.objectType == ObjectType.AUTOSTRAD)
-                {
-                    SetWheelSpeed(
-                        objectToUpdate.transform.gameObject,
-                        Vector3.Distance(currentPosition, desiredPosition),
-                        objectToUpdate.desiredTransform.moveSpeed);
-                }
-
-                Vector3 newPos = Vector3.MoveTowards(objectToUpdate.transform.position, objectToUpdate.desiredTransform.position, maxMoveDistance);
-
-                if (newPos.IsValid())
-                {
-                    objectToUpdate.transform.position = newPos;
-                }
-            }
-
-            if (objectToUpdate.statusUpdate)
-            {
-                SetStatusText(objectToUpdate.transform.gameObject, objectToUpdate.status);
-                objectToUpdate.statusUpdate = false;
-            }
-
-            var currentRotation = objectToUpdate.transform.rotation;
-            var desiredRotation = objectToUpdate.desiredTransform.rotation;
-
-            if (currentRotation != desiredRotation)
-            {
-                objectToUpdate.transform.rotation = Quaternion.RotateTowards(currentRotation, desiredRotation, objectToUpdate.desiredTransform.rotateSpeed * Time.deltaTime);
-            }
+            objectToUpdate.Update();
         }
         timer.Dispose();
     }
+
 
     private IEnumerator UpdateStatusObjects()
     {
@@ -600,35 +536,6 @@ public class LoadObjects : MonoBehaviour {
         }
     }
 
-    private void UpdateCraneSpreader(DesiredTransform desiredTransform, Transform trolley, Transform spreader)
-    {
-        Vector3 desiredTrolleyPosition = new Vector3(0, 0, desiredTransform.position.z);
-        Vector3 desiredSpreaderPosition = new Vector3(0, desiredTransform.position.y);
-        Vector3 newTrolleyPosition = Vector3.MoveTowards(trolley.localPosition, desiredTrolleyPosition, desiredTransform.moveSpeed * Time.deltaTime);
-
-        Vector3 dummy = Vector3.zero;
-        Vector3 newSpreaderPosition = Vector3.SmoothDamp(spreader.localPosition, desiredSpreaderPosition, ref dummy, 0.12f, desiredTransform.moveSpeed * 3f);
-
-
-        if (!newTrolleyPosition.IsValid() || !newSpreaderPosition.IsValid())
-            return;
-
-        trolley.localPosition = newTrolleyPosition;
-        spreader.localPosition = newSpreaderPosition;
-    }
-
-    private void UpdateAutoStradSpreader(DesiredTransform desiredTransform, Transform spreader)
-    {
-        Vector3 desiredSpreaderPosition = new Vector3(0, desiredTransform.position.y);
-        Vector3 dummy = Vector3.zero;
-        Vector3 newPos = Vector3.SmoothDamp(spreader.localPosition, desiredSpreaderPosition, ref dummy, 0.12f, desiredTransform.moveSpeed * 3f);
-
-        if (!newPos.IsValid())
-            return;
-
-        spreader.localPosition = newPos;
-    }
-
     private void InstantiateNewObject(string objectId, bool isStatic = false)
     {
         RenderObject renderObject;
@@ -641,23 +548,7 @@ public class LoadObjects : MonoBehaviour {
         var objectBase = GameObject.Find(renderObject.objectType.ToString());
 
         GameObject newObject = Instantiate(objectBase);
-
-        newObject.name = renderObject.id;
-        newObject.transform.localScale = renderObject.scale;
-        newObject.transform.rotation = renderObject.desiredTransform.rotation;
-        newObject.SetActive(true);
-        newObject.transform.position = renderObject.desiredTransform.position;
-        SetSpreader(newObject.transform, SpreaderType.SPREADER_EMPTY);
-        renderObject.desiredTransform.moveSpeed = 0;
-
-        SetString(newObject.transform, renderObject.id);
-
-        if (renderObject.objectType == ObjectType.CLAIM &&
-            renderObject.claim != null)
-        {
-            PolyClaim claim = newObject.GetComponent<PolyClaim>();
-            claim.SetClaim(renderObject.claim);
-        }
+        newObject.transform.SetParent(rootObject);
 
         if (renderObject.IsContainer())
         {
@@ -665,29 +556,10 @@ public class LoadObjects : MonoBehaviour {
             newObject.transform.SetParent(containerParent);
         }
 
-        if (renderObject.color != Color.clear)
-        {
-            if (renderObject.IsContainer())
-                SetContainerColor(newObject.transform, renderObject.color);
-            else
-            {
-                SetObjectColor(newObject.transform, renderObject.color);
-            }
-        }
-
-        if (renderObject.objectType == ObjectType.QC ||
-            renderObject.objectType == ObjectType.AUTOSTRAD)
-        {
-            /*SAMER
-            var cam = newObject.GetComponentInChildren<Camera>();
-            var cycler = FindObjectOfType<CameraCycler>();
-            cam.name = CameraCycler.CamNamePrefix + renderObject.id;
-            cycler.AddCamera(cam);
-            */
-        }
-
         lock (lockArray)
-            objectList[objectId].transform = newObject.transform;
+        {
+            renderObject.Initiate(newObject);
+        }
 
         Debug.Log("Added new " + renderObject.objectType.ToString());
     }
@@ -701,109 +573,11 @@ public class LoadObjects : MonoBehaviour {
         Debug.Log(objects.Count + " objects flagged for destruction.");
     }
 
-    private void SetSpreader(Transform transform, SpreaderType spreaderType, string containerId = "")
-    {
-        List<GameObject> spreaders = transform.FindObjectsWithTag("SPREADER");
-        foreach (GameObject spreader in spreaders)
-        {
-            bool isRightSpreader = spreader.name == spreaderType.ToString();
-            SetVisibility(spreader, isRightSpreader);
-
-            if (!isRightSpreader)
-                continue;
-
-            if (spreaderType == SpreaderType.SPREADER_TWIN_20 &&
-                containerId.Contains(","))
-            {
-                string[] containers = containerId.Split(',');
-                Transform container = spreader.transform.Find("CONTAINER_20_LEFT");
-                SetString(container, containers[0]);
-                container = spreader.transform.Find("CONTAINER_20_RIGHT");
-                SetString(container, containers[1]);
-            }
-
-            if (containerId != "")
-            {
-                if (spreaderType == SpreaderType.SPREADER_EMPTY)
-                {
-                    var currentContainer = GameObject.Find(containerId);
-                    if (currentContainer == null)
-                    {
-                        Debug.Log("No container found for " + containerId);
-                        continue;
-                    }
-
-                    currentContainer.transform.SetParent(null);
-                    SetVisibility(currentContainer, true);
-                }
-                else
-                {
-                    var newParent = spreader.transform.FindObjectsWithTag("CONTAINER_HOLDER").FirstOrDefault().transform;
-                    var currentContainer = GameObject.Find(containerId);
-
-                    if (newParent == null || currentContainer == null)
-                    {
-                        Debug.Log("No holder found for " + transform.gameObject.name);
-                        continue;
-                    }
-
-                    currentContainer.transform.SetParent(newParent);
-                    currentContainer.transform.localPosition = Vector3.zero;
-                }
-            }
-        }
-    }
-
     public List<RenderObject> GetObjectList()
     {
         lock (lockArray)
         {
             return objectList.Values.ToList();
-        }
-    }
-
-    private void SetVisibility(GameObject gameObject, bool isVisible)
-    {
-        var renderers = gameObject.GetComponentsInChildren<Renderer>();
-        foreach (Renderer renderer in renderers)
-        {
-            renderer.enabled = isVisible;
-        }
-    }
-
-    private void SetWheelSpeed(GameObject gameObject, float distance, float speed, bool reversed = false)
-    {
-        const float wheelSpeed = 1.963f;
-
-        var anim = gameObject.GetComponentInChildren<Animator>();
-        //anim.speed = speed / wheelSpeed * (reversed ? -1 : 1);
-        anim.speed = 1;
-    }
-
-    private static void SetString(Transform currentObject, string text)
-    {
-        var meshes = currentObject.GetComponentsInChildren<TextMesh>();
-
-        foreach (TextMesh textMesh in meshes)
-            if (textMesh.name.StartsWith("id-"))
-                textMesh.text = text;
-    }
-
-    private static void SetContainerColor(Transform currentObject, Color color)
-    {
-        var colorObjects = currentObject.transform.FindObjectsWithTag("CONTAINER_COLOR");
-        foreach (var colorObject in colorObjects)
-        {
-            SetObjectColor(colorObject.transform, color);
-        }
-    }
-
-    private static void SetObjectColor(Transform currentObject, Color color)
-    {
-        var renderers = currentObject.transform.GetComponentsInChildren<Renderer>();
-        foreach (Renderer renderer in renderers)
-        {
-            renderer.material.color = color;
         }
     }
 

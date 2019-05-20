@@ -17,6 +17,15 @@ public class PolyClaim : MonoBehaviour
         transform.GetComponent<MeshFilter>().mesh = mesh;
     }
 
+    public void SetColor(Color color)
+    {
+        var renderers = transform.GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.material.color = color;
+        }
+    }
+
     private List<Vector3> CreateClaim(List<Vector3> points)
     {
         var result = new List<Vector3>();

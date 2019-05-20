@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rope : MonoBehaviour {
+public class Rope : MonoBehaviour
+{
 
     public GameObject originObject;
     public Vector3 offsetFromOrigin = new Vector3();
@@ -14,7 +15,8 @@ public class Rope : MonoBehaviour {
     private GameObject ropeHolder;
 
     // Use this for initialization
-	void Start () {
+    void Start ()
+    {
         string ropeName = "rope_from_" + originObject.name + "_to_" + targetObject.name;
 
         RemoveOldRopeObject(ropeName);
@@ -30,8 +32,9 @@ public class Rope : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
-        if (ropeHolder == null)
+    void Update ()
+    {
+        if (ropeHolder == null || originObject == null || targetObject == null)
             return;
 
         Vector3 originOffset = (Quaternion.AngleAxis(-90, Vector3.up) * originObject.transform.rotation) * offsetFromOrigin;

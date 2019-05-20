@@ -2,19 +2,16 @@
 using ExtensionMethods;
 using UnityEngine.UI;
 
-public class StatusUpdate : MonoBehaviour {
-
+public class StatusUpdate : MonoBehaviour
+{
     private Canvas canvas;
     private Text text;
     private string status = "";
 
     void Start()
     {
-        if (canvas == null)
-            canvas = gameObject.GetComponentInChildren<Canvas>();
-
-        if (text == null)
-            text = GetComponentInChildren<Text>();
+        canvas = gameObject.GetComponentInChildren<Canvas>();
+        text = GetComponentInChildren<Text>();
     }
 
     private void OnMouseUp()
@@ -28,13 +25,13 @@ public class StatusUpdate : MonoBehaviour {
 
     void Update()
     {
-        if (text != null)
-            text.text = GetStatus();
+        //if (canvas.enabled && text != null )
+          //  text.text = GetStatus();
     }
 
     private string GetStatus()
     {
-        return (status + "\n<b>Position:</b>\n" + transform.position.UnityToPort().InverseAxes().ToMeter() + "\n<b>Heading:</b> " + transform.rotation.eulerAngles.y.ToString());
+        return (status + "\n<b>Position:</b>\n" + transform.localPosition.UnityToPort().InverseAxes().ToMeter() + "\n<b>Heading:</b> " + transform.localRotation.eulerAngles.y.ToString());
     }
 
     public void SetStatus(string _status)

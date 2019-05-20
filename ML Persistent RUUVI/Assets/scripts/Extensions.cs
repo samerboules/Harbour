@@ -44,6 +44,13 @@ namespace ExtensionMethods
         {
             return !float.IsNaN(input.x) && !float.IsNaN(input.y) && !float.IsNaN(input.z);
         }
+
+        public static bool IsApproximately(this Vector3 input, Vector3 other)
+        {
+            return Mathf.Approximately(input.x, other.x) &&
+                   Mathf.Approximately(input.y, other.y) &&
+                   Mathf.Approximately(input.z, other.z);
+        }
     }
 
     public static class TransformExtensions

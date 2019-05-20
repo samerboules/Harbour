@@ -6,16 +6,19 @@ public class FaceMe : MonoBehaviour {
 
     public Camera cam;
     public Vector3 offset;
+    private Canvas canvas;
+
 
     void Start()
     {
-        GetComponent<Canvas>().enabled = false;
+        canvas = GetComponent<Canvas>();
+        canvas.enabled = false;
     }
 
 	// Update is called once per frame
 	void Update ()
     {
-        if (cam == null)
+        if (!canvas.enabled || cam == null)
             return;
 
         var dist = Vector3.Distance(transform.position, cam.transform.position);

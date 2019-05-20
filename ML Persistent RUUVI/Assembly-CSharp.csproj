@@ -160,10 +160,14 @@
     <Compile Include="Assets\scripts\LoadGUI.cs" />
     <Compile Include="Assets\scripts\LoadObjects.cs" />
     <Compile Include="Assets\scripts\MeshingScript.cs" />
+    <Compile Include="Assets\scripts\Messages.cs" />
     <Compile Include="Assets\scripts\OrthoCam.cs" />
+    <Compile Include="Assets\scripts\PlacedObject.cs" />
     <Compile Include="Assets\scripts\PolyClaim.cs" />
+    <Compile Include="Assets\scripts\RenderObject.cs" />
     <Compile Include="Assets\scripts\Rope.cs" />
     <Compile Include="Assets\scripts\rotate.cs" />
+    <Compile Include="Assets\scripts\Spreader.cs" />
     <Compile Include="Assets\scripts\StatusUpdate.cs" />
     <Compile Include="Assets\scripts\Triangulator.cs" />
     <Compile Include="Assets\scripts\UpdateCircleColor.cs" />
