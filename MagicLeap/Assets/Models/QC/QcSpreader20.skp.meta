@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: 0c074a7630b38424e9fd330b2bc32434
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000
+  assetHash:
+    serializedVersion: 2
+    Hash: eeb01be735da7cfbbeeeb9b4a667f93f
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -18.07651, y: 10.221098, z: -7.7856627}
+      lookAt: {x: 30.447304, y: -3.5637124, z: -13.401242}
+      up: {x: 0.26979205, y: 0.96241236, z: -0.031222574}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: centre sec#1
+    100002: centre section
+    100004: centre section#2
+    100006: Component#101
+    100008: Component#109
+    100010: Component#110
+    100012: Component#110 1
+    100014: Component#128
+    100016: Component#128 1
+    100018: Component#128 2
+    100020: Component#128 3
+    100022: Component#128 4
+    100024: Component#128 5
+    100026: Component#128 6
+    100028: Component#128 7
+    100030: Component#130
+    100032: Component#130 1
+    100034: Component#130 2
+    100036: Component#130 3
+    100038: Component#132
+    100040: Component#133
+    100042: Component#133 1
+    100044: Component#134
+    100046: Component#134 1
+    100048: Component#135
+    100050: Component#135 1
+    100052: Component#135 2
+    100054: Component#135 3
+    100056: Component#136
+    100058: Component#136 1
+    100060: Component#136 2
+    100062: Component#136 3
+    100064: Component#190
+    100066: Component#4
+    100068: Component#4 1
+    100070: Component#4 2
+    100072: Component#4 3
+    100074: Component#4 4
+    100076: Component#4 5
+    100078: Component#4 6
+    100080: Component#4 7
+    100082: Dynamic spreader 6m rope_2
+    100084: Dynamic spreader 6m rope_2#1
+    100086: End Beam#1
+    100088: End Beam#4
+    100090: End Beam#4 1
+    100092: Flipper#1
+    100094: Flipper#1 1
+    100096: Flipper#1 2
+    100098: Flipper#1 3
+    100100: MHI+QC+30
+    100102: //RootNode
+    100104: sheave
+    100106: sheave 1
+    100108: sheave 2
+    100110: sheave 3
+    100112: sheave block#1
+    100114: sheave block#1 1
+    100116: Tele beam assy dynamic 4#5
+    100118: Tele beam assy dynamic 4#5 1
+    100120: Tele beam#1
+    100122: Tele beam#1 1
+    100124: Tele beam#1 2
+    100126: Tele beam#1 3
+    100128: trolley assy MHI dynamic
+    100130: twistlock
+    100132: twistlock 1
+    100134: twistlock 2
+    100136: twistlock 3
+    100138: twistlock 4
+    100140: twistlock 5
+    100142: twistlock 6
+    100144: twistlock 7
+    100146: unit
+    400000: centre sec#1
+    400002: centre section
+    400004: centre section#2
+    400006: Component#101
+    400008: Component#109
+    400010: Component#110
+    400012: Component#110 1
+    400014: Component#128
+    400016: Component#128 1
+    400018: Component#128 2
+    400020: Component#128 3
+    400022: Component#128 4
+    400024: Component#128 5
+    400026: Component#128 6
+    400028: Component#128 7
+    400030: Component#130
+    400032: Component#130 1
+    400034: Component#130 2
+    400036: Component#130 3
+    400038: Component#132
+    400040: Component#133
+    400042: Component#133 1
+    400044: Component#134
+    400046: Component#134 1
+    400048: Component#135
+    400050: Component#135 1
+    400052: Component#135 2
+    400054: Component#135 3
+    400056: Component#136
+    400058: Component#136 1
+    400060: Component#136 2
+    400062: Component#136 3
+    400064: Component#190
+    400066: Component#4
+    400068: Component#4 1
+    400070: Component#4 2
+    400072: Component#4 3
+    400074: Component#4 4
+    400076: Component#4 5
+    400078: Component#4 6
+    400080: Component#4 7
+    400082: Dynamic spreader 6m rope_2
+    400084: Dynamic spreader 6m rope_2#1
+    400086: End Beam#1
+    400088: End Beam#4
+    400090: End Beam#4 1
+    400092: Flipper#1
+    400094: Flipper#1 1
+    400096: Flipper#1 2
+    400098: Flipper#1 3
+    400100: MHI+QC+30
+    400102: //RootNode
+    400104: sheave
+    400106: sheave 1
+    400108: sheave 2
+    400110: sheave 3
+    400112: sheave block#1
+    400114: sheave block#1 1
+    400116: Tele beam assy dynamic 4#5
+    400118: Tele beam assy dynamic 4#5 1
+    400120: Tele beam#1
+    400122: Tele beam#1 1
+    400124: Tele beam#1 2
+    400126: Tele beam#1 3
+    400128: trolley assy MHI dynamic
+    400130: twistlock
+    400132: twistlock 1
+    400134: twistlock 2
+    400136: twistlock 3
+    400138: twistlock 4
+    400140: twistlock 5
+    400142: twistlock 6
+    400144: twistlock 7
+    400146: unit
+    2100000: _defaultMat
+    2100002: '[Color_C01]'
+    2100004: '[Color_E01]'
+    2100006: '[Fencing_Diamond_Mesh]'
+    2100008: '[Color_005]'
+    2100010: '[Color_A06]'
+    2100012: '[Color_004]'
+    2100014: '[Color_009]'
+    2300000: centre sec#1
+    2300002: centre section
+    2300004: Component#101
+    2300006: Component#109
+    2300008: Component#110
+    2300010: Component#110 1
+    2300012: Component#128
+    2300014: Component#128 1
+    2300016: Component#128 2
+    2300018: Component#128 3
+    2300020: Component#128 4
+    2300022: Component#128 5
+    2300024: Component#128 6
+    2300026: Component#128 7
+    2300028: Component#132
+    2300030: Component#135
+    2300032: Component#135 1
+    2300034: Component#135 2
+    2300036: Component#135 3
+    2300038: Component#136
+    2300040: Component#136 1
+    2300042: Component#136 2
+    2300044: Component#136 3
+    2300046: Component#4
+    2300048: Component#4 1
+    2300050: Component#4 2
+    2300052: Component#4 3
+    2300054: Component#4 4
+    2300056: Component#4 5
+    2300058: Component#4 6
+    2300060: Component#4 7
+    2300062: End Beam#4
+    2300064: End Beam#4 1
+    2300066: Flipper#1
+    2300068: Flipper#1 1
+    2300070: Flipper#1 2
+    2300072: Flipper#1 3
+    2300074: sheave
+    2300076: sheave 1
+    2300078: sheave 2
+    2300080: sheave 3
+    2300082: sheave block#1
+    2300084: sheave block#1 1
+    2300086: Tele beam#1
+    2300088: Tele beam#1 1
+    2300090: Tele beam#1 2
+    2300092: Tele beam#1 3
+    2300094: twistlock
+    2300096: twistlock 1
+    2300098: twistlock 2
+    2300100: twistlock 3
+    2300102: twistlock 4
+    2300104: twistlock 5
+    2300106: twistlock 6
+    2300108: twistlock 7
+    3300000: centre sec#1
+    3300002: centre section
+    3300004: Component#101
+    3300006: Component#109
+    3300008: Component#110
+    3300010: Component#110 1
+    3300012: Component#128
+    3300014: Component#128 1
+    3300016: Component#128 2
+    3300018: Component#128 3
+    3300020: Component#128 4
+    3300022: Component#128 5
+    3300024: Component#128 6
+    3300026: Component#128 7
+    3300028: Component#132
+    3300030: Component#135
+    3300032: Component#135 1
+    3300034: Component#135 2
+    3300036: Component#135 3
+    3300038: Component#136
+    3300040: Component#136 1
+    3300042: Component#136 2
+    3300044: Component#136 3
+    3300046: Component#4
+    3300048: Component#4 1
+    3300050: Component#4 2
+    3300052: Component#4 3
+    3300054: Component#4 4
+    3300056: Component#4 5
+    3300058: Component#4 6
+    3300060: Component#4 7
+    3300062: End Beam#4
+    3300064: End Beam#4 1
+    3300066: Flipper#1
+    3300068: Flipper#1 1
+    3300070: Flipper#1 2
+    3300072: Flipper#1 3
+    3300074: sheave
+    3300076: sheave 1
+    3300078: sheave 2
+    3300080: sheave 3
+    3300082: sheave block#1
+    3300084: sheave block#1 1
+    3300086: Tele beam#1
+    3300088: Tele beam#1 1
+    3300090: Tele beam#1 2
+    3300092: Tele beam#1 3
+    3300094: twistlock
+    3300096: twistlock 1
+    3300098: twistlock 2
+    3300100: twistlock 3
+    3300102: twistlock 4
+    3300104: twistlock 5
+    3300106: twistlock 6
+    3300108: twistlock 7
+    4300000: Mesh centre section
+    4300002: Mesh Component#132
+    4300004: Mesh Component#110
+    4300006: Mesh centre sec#1
+    4300008: Mesh Component#135
+    4300010: Mesh Component#4
+    4300012: Mesh Component#4
+    4300014: Mesh twistlock
+    4300016: Mesh Tele beam#1
+    4300018: Mesh End Beam#4
+    4300020: Mesh Flipper#1
+    4300022: Mesh Component#136
+    4300024: Mesh Component#128
+    4300026: Mesh Component#109
+    4300028: Mesh sheave block#1
+    4300030: Mesh sheave
+    4300032: Mesh sheave
+    4300034: Mesh Component#101
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
