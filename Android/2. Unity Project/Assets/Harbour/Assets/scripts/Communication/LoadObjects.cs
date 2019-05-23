@@ -13,7 +13,7 @@ using UnityEngine;
 public class LoadObjects : MonoBehaviour {
 
     private bool connected = false;
-    public bool drawClaims;
+    private bool drawClaims = false;
     private bool updatedStatus = false;
     private Transform rootObject;
 
@@ -411,7 +411,7 @@ public class LoadObjects : MonoBehaviour {
             color = GetColorFromLong(jsonObject.c);
         }
 
-        if (jsonObject.type == "CONTAINER_40")
+        if (jsonObject.type == "CONTAINER_40" || jsonObject.type == "CONTAINER_20")
         {
             color = GetColorFromLong(ContainerColorer.GetHexColorFromPrefix(jsonObject.id.Substring(0, 4))); 
         }
