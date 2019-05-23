@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: bdedd12424f7d75448a31ec2cd390c56
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: box
+    100002: box 1
+    100004: cylinder
+    100006: cylinder 1
+    100008: cylinder 10
+    100010: cylinder 11
+    100012: cylinder 12
+    100014: cylinder 13
+    100016: cylinder 14
+    100018: cylinder 15
+    100020: cylinder 16
+    100022: cylinder 17
+    100024: cylinder 18
+    100026: cylinder 19
+    100028: cylinder 2
+    100030: cylinder 20
+    100032: cylinder 21
+    100034: cylinder 22
+    100036: cylinder 23
+    100038: cylinder 24
+    100040: cylinder 25
+    100042: cylinder 26
+    100044: cylinder 27
+    100046: cylinder 28
+    100048: cylinder 29
+    100050: cylinder 3
+    100052: cylinder 30
+    100054: cylinder 31
+    100056: cylinder 32
+    100058: cylinder 33
+    100060: cylinder 34
+    100062: cylinder 35
+    100064: cylinder 36
+    100066: cylinder 37
+    100068: cylinder 38
+    100070: cylinder 39
+    100072: cylinder 4
+    100074: cylinder 40
+    100076: cylinder 41
+    100078: cylinder 42
+    100080: cylinder 43
+    100082: cylinder 44
+    100084: cylinder 45
+    100086: cylinder 46
+    100088: cylinder 47
+    100090: cylinder 48
+    100092: cylinder 49
+    100094: cylinder 5
+    100096: cylinder 50
+    100098: cylinder 51
+    100100: cylinder 52
+    100102: cylinder 53
+    100104: cylinder 54
+    100106: cylinder 55
+    100108: cylinder 56
+    100110: cylinder 57
+    100112: cylinder 58
+    100114: cylinder 59
+    100116: cylinder 6
+    100118: cylinder 60
+    100120: cylinder 61
+    100122: cylinder 62
+    100124: cylinder 63
+    100126: cylinder 64
+    100128: cylinder 65
+    100130: cylinder 66
+    100132: cylinder 67
+    100134: cylinder 68
+    100136: cylinder 69
+    100138: cylinder 7
+    100140: cylinder 8
+    100142: cylinder 9
+    100144: group_0
+    100146: Group_1
+    100148: group_1
+    100150: Group_1 1
+    100152: group_2
+    100154: group_3
+    100156: group_4
+    100158: group_5
+    100160: group_6
+    100162: ID433
+    100164: ID433 1
+    100166: ID82
+    100168: instance_0
+    100170: instance_1
+    100172: //RootNode
+    100174: skp_camera_Last_Saved_SketchUp_View
+    400000: box
+    400002: box 1
+    400004: cylinder
+    400006: cylinder 1
+    400008: cylinder 10
+    400010: cylinder 11
+    400012: cylinder 12
+    400014: cylinder 13
+    400016: cylinder 14
+    400018: cylinder 15
+    400020: cylinder 16
+    400022: cylinder 17
+    400024: cylinder 18
+    400026: cylinder 19
+    400028: cylinder 2
+    400030: cylinder 20
+    400032: cylinder 21
+    400034: cylinder 22
+    400036: cylinder 23
+    400038: cylinder 24
+    400040: cylinder 25
+    400042: cylinder 26
+    400044: cylinder 27
+    400046: cylinder 28
+    400048: cylinder 29
+    400050: cylinder 3
+    400052: cylinder 30
+    400054: cylinder 31
+    400056: cylinder 32
+    400058: cylinder 33
+    400060: cylinder 34
+    400062: cylinder 35
+    400064: cylinder 36
+    400066: cylinder 37
+    400068: cylinder 38
+    400070: cylinder 39
+    400072: cylinder 4
+    400074: cylinder 40
+    400076: cylinder 41
+    400078: cylinder 42
+    400080: cylinder 43
+    400082: cylinder 44
+    400084: cylinder 45
+    400086: cylinder 46
+    400088: cylinder 47
+    400090: cylinder 48
+    400092: cylinder 49
+    400094: cylinder 5
+    400096: cylinder 50
+    400098: cylinder 51
+    400100: cylinder 52
+    400102: cylinder 53
+    400104: cylinder 54
+    400106: cylinder 55
+    400108: cylinder 56
+    400110: cylinder 57
+    400112: cylinder 58
+    400114: cylinder 59
+    400116: cylinder 6
+    400118: cylinder 60
+    400120: cylinder 61
+    400122: cylinder 62
+    400124: cylinder 63
+    400126: cylinder 64
+    400128: cylinder 65
+    400130: cylinder 66
+    400132: cylinder 67
+    400134: cylinder 68
+    400136: cylinder 69
+    400138: cylinder 7
+    400140: cylinder 8
+    400142: cylinder 9
+    400144: group_0
+    400146: Group_1
+    400148: group_1
+    400150: Group_1 1
+    400152: group_2
+    400154: group_3
+    400156: group_4
+    400158: group_5
+    400160: group_6
+    400162: ID433
+    400164: ID433 1
+    400166: ID82
+    400168: instance_0
+    400170: instance_1
+    400172: //RootNode
+    400174: skp_camera_Last_Saved_SketchUp_View
+    2000000: skp_camera_Last_Saved_SketchUp_View
+    2100000: Orange
+    2300000: box
+    2300002: box 1
+    2300004: cylinder
+    2300006: cylinder 1
+    2300008: cylinder 10
+    2300010: cylinder 11
+    2300012: cylinder 12
+    2300014: cylinder 13
+    2300016: cylinder 14
+    2300018: cylinder 15
+    2300020: cylinder 16
+    2300022: cylinder 17
+    2300024: cylinder 18
+    2300026: cylinder 19
+    2300028: cylinder 2
+    2300030: cylinder 20
+    2300032: cylinder 21
+    2300034: cylinder 22
+    2300036: cylinder 23
+    2300038: cylinder 24
+    2300040: cylinder 25
+    2300042: cylinder 26
+    2300044: cylinder 27
+    2300046: cylinder 28
+    2300048: cylinder 29
+    2300050: cylinder 3
+    2300052: cylinder 30
+    2300054: cylinder 31
+    2300056: cylinder 32
+    2300058: cylinder 33
+    2300060: cylinder 34
+    2300062: cylinder 35
+    2300064: cylinder 36
+    2300066: cylinder 37
+    2300068: cylinder 38
+    2300070: cylinder 39
+    2300072: cylinder 4
+    2300074: cylinder 40
+    2300076: cylinder 41
+    2300078: cylinder 42
+    2300080: cylinder 43
+    2300082: cylinder 44
+    2300084: cylinder 45
+    2300086: cylinder 46
+    2300088: cylinder 47
+    2300090: cylinder 48
+    2300092: cylinder 49
+    2300094: cylinder 5
+    2300096: cylinder 50
+    2300098: cylinder 51
+    2300100: cylinder 52
+    2300102: cylinder 53
+    2300104: cylinder 54
+    2300106: cylinder 55
+    2300108: cylinder 56
+    2300110: cylinder 57
+    2300112: cylinder 58
+    2300114: cylinder 59
+    2300116: cylinder 6
+    2300118: cylinder 60
+    2300120: cylinder 61
+    2300122: cylinder 62
+    2300124: cylinder 63
+    2300126: cylinder 64
+    2300128: cylinder 65
+    2300130: cylinder 66
+    2300132: cylinder 67
+    2300134: cylinder 68
+    2300136: cylinder 69
+    2300138: cylinder 7
+    2300140: cylinder 8
+    2300142: cylinder 9
+    2300144: Group_1
+    2300146: group_1
+    2300148: Group_1 1
+    2300150: group_2
+    2300152: group_4
+    2300154: group_5
+    2300156: group_6
+    2300158: ID433
+    2300160: ID433 1
+    2300162: ID82
+    3300000: box
+    3300002: box 1
+    3300004: cylinder
+    3300006: cylinder 1
+    3300008: cylinder 10
+    3300010: cylinder 11
+    3300012: cylinder 12
+    3300014: cylinder 13
+    3300016: cylinder 14
+    3300018: cylinder 15
+    3300020: cylinder 16
+    3300022: cylinder 17
+    3300024: cylinder 18
+    3300026: cylinder 19
+    3300028: cylinder 2
+    3300030: cylinder 20
+    3300032: cylinder 21
+    3300034: cylinder 22
+    3300036: cylinder 23
+    3300038: cylinder 24
+    3300040: cylinder 25
+    3300042: cylinder 26
+    3300044: cylinder 27
+    3300046: cylinder 28
+    3300048: cylinder 29
+    3300050: cylinder 3
+    3300052: cylinder 30
+    3300054: cylinder 31
+    3300056: cylinder 32
+    3300058: cylinder 33
+    3300060: cylinder 34
+    3300062: cylinder 35
+    3300064: cylinder 36
+    3300066: cylinder 37
+    3300068: cylinder 38
+    3300070: cylinder 39
+    3300072: cylinder 4
+    3300074: cylinder 40
+    3300076: cylinder 41
+    3300078: cylinder 42
+    3300080: cylinder 43
+    3300082: cylinder 44
+    3300084: cylinder 45
+    3300086: cylinder 46
+    3300088: cylinder 47
+    3300090: cylinder 48
+    3300092: cylinder 49
+    3300094: cylinder 5
+    3300096: cylinder 50
+    3300098: cylinder 51
+    3300100: cylinder 52
+    3300102: cylinder 53
+    3300104: cylinder 54
+    3300106: cylinder 55
+    3300108: cylinder 56
+    3300110: cylinder 57
+    3300112: cylinder 58
+    3300114: cylinder 59
+    3300116: cylinder 6
+    3300118: cylinder 60
+    3300120: cylinder 61
+    3300122: cylinder 62
+    3300124: cylinder 63
+    3300126: cylinder 64
+    3300128: cylinder 65
+    3300130: cylinder 66
+    3300132: cylinder 67
+    3300134: cylinder 68
+    3300136: cylinder 69
+    3300138: cylinder 7
+    3300140: cylinder 8
+    3300142: cylinder 9
+    3300144: Group_1
+    3300146: group_1
+    3300148: Group_1 1
+    3300150: group_2
+    3300152: group_4
+    3300154: group_5
+    3300156: group_6
+    3300158: ID433
+    3300160: ID433 1
+    3300162: ID82
+    4300000: group_1
+    4300002: group_2
+    4300004: ID82
+    4300006: cylinder
+    4300008: cylinder
+    4300010: cylinder
+    4300012: cylinder
+    4300014: cylinder
+    4300016: cylinder
+    4300018: box
+    4300020: box
+    4300022: group_4
+    4300024: group_5
+    4300026: group_6
+    4300028: Group_1
+    4300030: ID433
+    4300032: cylinder
+    4300034: cylinder
+    4300036: cylinder
+    4300038: cylinder
+    4300040: cylinder
+    4300042: cylinder
+    4300044: cylinder
+    4300046: cylinder
+    4300048: cylinder
+    4300050: cylinder
+    4300052: cylinder
+    4300054: cylinder
+    4300056: cylinder
+    4300058: cylinder
+    4300060: cylinder
+    4300062: cylinder
+    4300064: cylinder
+    4300066: cylinder
+    4300068: cylinder
+    4300070: cylinder
+    4300072: cylinder
+    4300074: cylinder
+    4300076: cylinder
+    4300078: cylinder
+    4300080: cylinder
+    4300082: cylinder
+    4300084: cylinder
+    4300086: cylinder
+    4300088: cylinder
+    4300090: cylinder
+    4300092: cylinder
+    4300094: cylinder
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 6f9823a31175b4348b094e15d8e0c3b9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

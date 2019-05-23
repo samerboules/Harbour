@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: 1b80b18776399e74a9c7357529341096
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 0e4546fe4fa519acdce408815dfe395f
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -10.763606, y: 4.6657457, z: -6.1027884}
+      lookAt: {x: 3.0978029, y: 0.061214697, z: 2.7401483}
+      up: {x: 0.22734907, y: 0.9629519, z: 0.14503817}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Component#12
+    100002: Component#12 1
+    100004: Component#12 2
+    100006: Component#12 3
+    100008: Component#15
+    100010: Component#15 1
+    100012: Component#20
+    100014: Component#20 1
+    100016: Component#63
+    100018: Component#63 1
+    100020: Component#64
+    100022: Component#64 1
+    100024: Component#65
+    100026: Component#65 1
+    100028: Component#65 2
+    100030: Component#65 3
+    100032: Group 14
+    100034: Group 3
+    100036: Hoist Drum
+    100038: Hoist Drum#1
+    100040: Kone ASC
+    100042: trolley
+    100044: //RootNode
+    100046: wheel
+    100048: wheel 1
+    100050: wheel 2
+    100052: wheel 3
+    100054: Component#33
+    100056: Component#33 1
+    100058: Component#33 2
+    100060: Component#33 3
+    100062: Component#34
+    100064: Component#34 1
+    100066: Component#34 2
+    100068: Component#34 3
+    100070: Component#35
+    100072: Component#35 1
+    100074: Component#35 2
+    100076: Component#35 3
+    100078: Component#35 4
+    100080: Component#35 5
+    100082: Component#35 6
+    100084: Component#35 7
+    100086: Component#36
+    100088: Component#36 1
+    100090: Component#36 2
+    100092: Component#36 3
+    100094: Component#37
+    100096: Component#37 1
+    100098: Component#37 10
+    100100: Component#37 11
+    100102: Component#37 12
+    100104: Component#37 13
+    100106: Component#37 14
+    100108: Component#37 15
+    100110: Component#37 2
+    100112: Component#37 3
+    100114: Component#37 4
+    100116: Component#37 5
+    100118: Component#37 6
+    100120: Component#37 7
+    100122: Component#37 8
+    100124: Component#37 9
+    100126: Component#38
+    100128: Component#38 1
+    100130: Component#38 2
+    100132: Component#38 3
+    100134: Component#39
+    100136: Component#39 1
+    100138: Component#39 2
+    100140: Component#39 3
+    100142: Component_1#2
+    100144: Component_1#2 1
+    100146: Component_1#2 2
+    100148: Component_1#2 3
+    100150: Component_1#2 4
+    100152: Component_1#2 5
+    100154: Component_1#2 6
+    100156: Component_1#2 7
+    100158: Group 1
+    100160: Group 12
+    100162: Group22#1
+    100164: Group22#1 1
+    100166: Group22#1 2
+    100168: Group22#1 3
+    100170: Group22#1 4
+    100172: Group22#1 5
+    100174: Group22#1 6
+    100176: Group22#1 7
+    100178: step
+    100180: step 1
+    100182: step 10
+    100184: step 11
+    100186: step 12
+    100188: step 13
+    100190: step 14
+    100192: step 15
+    100194: step 2
+    100196: step 3
+    100198: step 4
+    100200: step 5
+    100202: step 6
+    100204: step 7
+    100206: step 8
+    100208: step 9
+    100210: step#1
+    100212: step#1 1
+    100214: step#1 2
+    100216: step#1 3
+    100218: top handrail#3
+    100220: top handrail#3 1
+    100222: top handrail#3 2
+    100224: top handrail#3 3
+    100226: top handrail#4
+    100228: top handrail#4 1
+    100230: top handrail#4 2
+    100232: top handrail#4 3
+    400000: Component#12
+    400002: Component#12 1
+    400004: Component#12 2
+    400006: Component#12 3
+    400008: Component#15
+    400010: Component#15 1
+    400012: Component#20
+    400014: Component#20 1
+    400016: Component#63
+    400018: Component#63 1
+    400020: Component#64
+    400022: Component#64 1
+    400024: Component#65
+    400026: Component#65 1
+    400028: Component#65 2
+    400030: Component#65 3
+    400032: Group 14
+    400034: Group 3
+    400036: Hoist Drum
+    400038: Hoist Drum#1
+    400040: Kone ASC
+    400042: trolley
+    400044: //RootNode
+    400046: wheel
+    400048: wheel 1
+    400050: wheel 2
+    400052: wheel 3
+    400054: Component#33
+    400056: Component#33 1
+    400058: Component#33 2
+    400060: Component#33 3
+    400062: Component#34
+    400064: Component#34 1
+    400066: Component#34 2
+    400068: Component#34 3
+    400070: Component#35
+    400072: Component#35 1
+    400074: Component#35 2
+    400076: Component#35 3
+    400078: Component#35 4
+    400080: Component#35 5
+    400082: Component#35 6
+    400084: Component#35 7
+    400086: Component#36
+    400088: Component#36 1
+    400090: Component#36 2
+    400092: Component#36 3
+    400094: Component#37
+    400096: Component#37 1
+    400098: Component#37 10
+    400100: Component#37 11
+    400102: Component#37 12
+    400104: Component#37 13
+    400106: Component#37 14
+    400108: Component#37 15
+    400110: Component#37 2
+    400112: Component#37 3
+    400114: Component#37 4
+    400116: Component#37 5
+    400118: Component#37 6
+    400120: Component#37 7
+    400122: Component#37 8
+    400124: Component#37 9
+    400126: Component#38
+    400128: Component#38 1
+    400130: Component#38 2
+    400132: Component#38 3
+    400134: Component#39
+    400136: Component#39 1
+    400138: Component#39 2
+    400140: Component#39 3
+    400142: Component_1#2
+    400144: Component_1#2 1
+    400146: Component_1#2 2
+    400148: Component_1#2 3
+    400150: Component_1#2 4
+    400152: Component_1#2 5
+    400154: Component_1#2 6
+    400156: Component_1#2 7
+    400158: Group 1
+    400160: Group 12
+    400162: Group22#1
+    400164: Group22#1 1
+    400166: Group22#1 2
+    400168: Group22#1 3
+    400170: Group22#1 4
+    400172: Group22#1 5
+    400174: Group22#1 6
+    400176: Group22#1 7
+    400178: step
+    400180: step 1
+    400182: step 10
+    400184: step 11
+    400186: step 12
+    400188: step 13
+    400190: step 14
+    400192: step 15
+    400194: step 2
+    400196: step 3
+    400198: step 4
+    400200: step 5
+    400202: step 6
+    400204: step 7
+    400206: step 8
+    400208: step 9
+    400210: step#1
+    400212: step#1 1
+    400214: step#1 2
+    400216: step#1 3
+    400218: top handrail#3
+    400220: top handrail#3 1
+    400222: top handrail#3 2
+    400224: top handrail#3 3
+    400226: top handrail#4
+    400228: top handrail#4 1
+    400230: top handrail#4 2
+    400232: top handrail#4 3
+    2100000: _defaultMat
+    2100002: Leaf Green
+    2100004: '[Color_001]'
+    2100006: '[Color_004]'
+    2100008: '[Color_003]'
+    2100010: '[Color_005]1'
+    2100012: '[Color_002]'
+    2100014: '[Color_G17]'
+    2100016: '[Fencing_Diamond_Mesh]'
+    2300000: Component#12
+    2300002: Component#12 1
+    2300004: Component#12 2
+    2300006: Component#12 3
+    2300008: Component#15
+    2300010: Component#15 1
+    2300012: Component#20
+    2300014: Component#20 1
+    2300016: Component#63
+    2300018: Component#63 1
+    2300020: Component#64
+    2300022: Component#64 1
+    2300024: Component#65
+    2300026: Component#65 1
+    2300028: Component#65 2
+    2300030: Component#65 3
+    2300032: Hoist Drum
+    2300034: Hoist Drum#1
+    2300036: wheel
+    2300038: wheel 1
+    2300040: wheel 2
+    2300042: wheel 3
+    2300044: Component#33
+    2300046: Component#33 1
+    2300048: Component#33 2
+    2300050: Component#33 3
+    2300052: Component#35
+    2300054: Component#35 1
+    2300056: Component#35 2
+    2300058: Component#35 3
+    2300060: Component#35 4
+    2300062: Component#35 5
+    2300064: Component#35 6
+    2300066: Component#35 7
+    2300068: Component#36
+    2300070: Component#36 1
+    2300072: Component#36 2
+    2300074: Component#36 3
+    2300076: Component#37
+    2300078: Component#37 1
+    2300080: Component#37 10
+    2300082: Component#37 11
+    2300084: Component#37 12
+    2300086: Component#37 13
+    2300088: Component#37 14
+    2300090: Component#37 15
+    2300092: Component#37 2
+    2300094: Component#37 3
+    2300096: Component#37 4
+    2300098: Component#37 5
+    2300100: Component#37 6
+    2300102: Component#37 7
+    2300104: Component#37 8
+    2300106: Component#37 9
+    2300108: Component#38
+    2300110: Component#38 1
+    2300112: Component#38 2
+    2300114: Component#38 3
+    2300116: Component_1#2
+    2300118: Component_1#2 1
+    2300120: Component_1#2 2
+    2300122: Component_1#2 3
+    2300124: Component_1#2 4
+    2300126: Component_1#2 5
+    2300128: Component_1#2 6
+    2300130: Component_1#2 7
+    2300132: Group22#1
+    2300134: Group22#1 1
+    2300136: Group22#1 2
+    2300138: Group22#1 3
+    2300140: Group22#1 4
+    2300142: Group22#1 5
+    2300144: Group22#1 6
+    2300146: Group22#1 7
+    2300148: step
+    2300150: step 1
+    2300152: step 10
+    2300154: step 11
+    2300156: step 12
+    2300158: step 13
+    2300160: step 14
+    2300162: step 15
+    2300164: step 2
+    2300166: step 3
+    2300168: step 4
+    2300170: step 5
+    2300172: step 6
+    2300174: step 7
+    2300176: step 8
+    2300178: step 9
+    2300180: step#1
+    2300182: step#1 1
+    2300184: step#1 2
+    2300186: step#1 3
+    3300000: Component#12
+    3300002: Component#12 1
+    3300004: Component#12 2
+    3300006: Component#12 3
+    3300008: Component#15
+    3300010: Component#15 1
+    3300012: Component#20
+    3300014: Component#20 1
+    3300016: Component#63
+    3300018: Component#63 1
+    3300020: Component#64
+    3300022: Component#64 1
+    3300024: Component#65
+    3300026: Component#65 1
+    3300028: Component#65 2
+    3300030: Component#65 3
+    3300032: Hoist Drum
+    3300034: Hoist Drum#1
+    3300036: wheel
+    3300038: wheel 1
+    3300040: wheel 2
+    3300042: wheel 3
+    3300044: Component#33
+    3300046: Component#33 1
+    3300048: Component#33 2
+    3300050: Component#33 3
+    3300052: Component#35
+    3300054: Component#35 1
+    3300056: Component#35 2
+    3300058: Component#35 3
+    3300060: Component#35 4
+    3300062: Component#35 5
+    3300064: Component#35 6
+    3300066: Component#35 7
+    3300068: Component#36
+    3300070: Component#36 1
+    3300072: Component#36 2
+    3300074: Component#36 3
+    3300076: Component#37
+    3300078: Component#37 1
+    3300080: Component#37 10
+    3300082: Component#37 11
+    3300084: Component#37 12
+    3300086: Component#37 13
+    3300088: Component#37 14
+    3300090: Component#37 15
+    3300092: Component#37 2
+    3300094: Component#37 3
+    3300096: Component#37 4
+    3300098: Component#37 5
+    3300100: Component#37 6
+    3300102: Component#37 7
+    3300104: Component#37 8
+    3300106: Component#37 9
+    3300108: Component#38
+    3300110: Component#38 1
+    3300112: Component#38 2
+    3300114: Component#38 3
+    3300116: Component_1#2
+    3300118: Component_1#2 1
+    3300120: Component_1#2 2
+    3300122: Component_1#2 3
+    3300124: Component_1#2 4
+    3300126: Component_1#2 5
+    3300128: Component_1#2 6
+    3300130: Component_1#2 7
+    3300132: Group22#1
+    3300134: Group22#1 1
+    3300136: Group22#1 2
+    3300138: Group22#1 3
+    3300140: Group22#1 4
+    3300142: Group22#1 5
+    3300144: Group22#1 6
+    3300146: Group22#1 7
+    3300148: step
+    3300150: step 1
+    3300152: step 10
+    3300154: step 11
+    3300156: step 12
+    3300158: step 13
+    3300160: step 14
+    3300162: step 15
+    3300164: step 2
+    3300166: step 3
+    3300168: step 4
+    3300170: step 5
+    3300172: step 6
+    3300174: step 7
+    3300176: step 8
+    3300178: step 9
+    3300180: step#1
+    3300182: step#1 1
+    3300184: step#1 2
+    3300186: step#1 3
+    4300000: Mesh wheel
+    4300002: Mesh Component#15
+    4300004: Mesh Component#12
+    4300006: Mesh Component#64
+    4300008: Mesh Component#63
+    4300010: Mesh Component#65
+    4300012: Mesh Hoist Drum#1
+    4300014: Mesh Component#20
+    4300016: Mesh Hoist Drum
+    4300018: Mesh step#1
+    4300020: Mesh Component_1#2
+    4300022: Mesh Component#35
+    4300024: Mesh Group22#1
+    4300026: Mesh step
+    4300028: Mesh Component#33
+    4300030: Mesh Component#38
+    4300032: Mesh Component#37
+    4300034: Mesh Component#36
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
