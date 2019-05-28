@@ -1408,6 +1408,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4877102795652228}
+  - component: {fileID: 114184502255384762}
+  - component: {fileID: 135843849818823386}
+  - component: {fileID: 54607660273118138}
+  - component: {fileID: 114892953263142506}
+  - component: {fileID: 114787407114222826}
+  - component: {fileID: 114895043498721508}
   m_Layer: 0
   m_Name: TerminalVisualization
   m_TagString: Untagged
@@ -13972,8 +13978,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142642652939750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children:
   - {fileID: 4885168468977072}
   - {fileID: 4213179963238012}
@@ -30042,6 +30048,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545543976843752}
   m_Mesh: {fileID: 4300028, guid: 0831a2da17da70647a15ec6bf8de016a, type: 3}
+--- !u!54 &54607660273118138
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64281122437934848
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -30329,6 +30350,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca30048e25eddd48bd3e9ce2bf89102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114184502255384762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060932cc11c484c25ac9a2214df40470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UniqueId: 
+  TimeOutInSeconds: 5
+  RetryDelayInSeconds: 2
+  NumRetriesForRestore: 3
 --- !u!114 &114205174910230260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30450,6 +30486,17 @@ MonoBehaviour:
   EquipmentType: 3
   HasSpreader: 0
   SpreaderSmoothTime: 0.12
+--- !u!114 &114787407114222826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4969b0f878e3674eb106760812b2ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114882852041735794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30465,6 +30512,31 @@ MonoBehaviour:
   rightBeam: {fileID: 4313622948609368}
   Offset: 0
   DesiredLength: 12.192
+--- !u!114 &114892953263142506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdbde62410e4b641a02242deca6382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameText: {fileID: 0}
+  _highlightEffect: {fileID: 0}
+  _lineToPCF: {fileID: 0}
+--- !u!114 &114895043498721508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8dfd81c944fec4ab1bcb6c18f96a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114946411879240508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30487,3 +30559,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca30048e25eddd48bd3e9ce2bf89102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135843849818823386
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142642652939750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
