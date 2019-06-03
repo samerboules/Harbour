@@ -16,7 +16,7 @@ public class LoadGUI : MonoBehaviour
     void Start()
     {
         LoadObjects = GetComponent<LoadObjects>();
-        InvokeRepeating("ConnectToServer", 0, 2.0f);
+        InvokeRepeating("ConnectToServer", 0, 15f);
     }
 
     void ConnectToServer()
