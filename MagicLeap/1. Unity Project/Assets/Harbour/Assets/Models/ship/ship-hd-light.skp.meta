@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 11ed0dae06c85854ca7544f094e7dace
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 0000000001000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 77d6fea42316e276e3908a4bc79a0d72
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 148.95378, y: 61.885258, z: 90.762276}
+      lookAt: {x: -21383.213, y: -3959.509, z: -9373.186}
+      up: {x: -0.15428546, y: 0.98569643, z: -0.06781247}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2100000: _defaultMat
+    2100002: '[_Light Oliv_]'
+    2100004: _1
+    2100006: '[CoolGray4]'
+    2100008: '[Color_000]'
+    2100010: '[0136_Charcoal]'
+    2100012: '[0128_White]'
+    2100014: '[Color_007]'
+    2100016: '[Color_A04]'
+    2100018: Green
+    2100020: '[Metal_Seamed]3'
+    2100022: '[White]1'
+    2100024: '[Metal_Aluminum_Anodized]'
+    2100026: BandesJaunesNoires
+    2100028: '[Translucent_Glass_Tinted]'
+    2100030: _27
+    2100032: '[0135_DarkGray]'
+    2100034: '[Metal_Rusted]1'
+    2100036: '[Metal_Aluminum_Anodized]10'
+    2100038: '[Orange]1'
+    2100040: '[Water_Pool_Light]'
+    2100042: _Grid_
+    2100044: _Gray Glass_1
+    2100046: '[Jade]'
+    2100048: '[0132_LightGray]1'
+    2100050: '[Sky]'
+    2100052: '[Buff]3'
+    2100054: '[0129_WhiteSmoke]'
+    2100056: '[0136_Charcoal]2'
+    2100058: '[0018_Brown]'
+    2100060: '[Green]'
+    2100062: '[0021_DarkRed]'
+    2100064: '[Roofing_Metal_Standing_Seam_Red]1'
+    2100066: '[Fencing_Diamond_Mesh]1'
+    2100068: _8
+    2100070: _WhiteSmoke_
+    2100072: _Burnt Umber_1
+    2100074: '[Translucent_Glass_Gold]'
+    2100076: '[0137_Black]'
+    2100078: _2
+    2100080: 'Material #1'
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Mesh ship-hd-light
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

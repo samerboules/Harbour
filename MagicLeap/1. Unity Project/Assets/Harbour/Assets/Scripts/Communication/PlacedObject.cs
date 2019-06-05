@@ -128,7 +128,8 @@ public class PlacedObject : MonoBehaviour
         Vector3 desiredSpreaderPosition = new Vector3(0, desiredTransform.position.y);
 
         Vector3 newTrolleyPosition = Vector3.MoveTowards(_trolley.localPosition, desiredTrolleyPosition, desiredTransform.moveSpeed * Time.deltaTime);
-        Vector3 newSpreaderPosition = Vector3.SmoothDamp(_spreader.localPosition, desiredSpreaderPosition, ref dummy, SpreaderSmoothTime, desiredTransform.moveSpeed * 3f);
+        //Vector3 newSpreaderPosition = Vector3.SmoothDamp(_spreader.localPosition, desiredSpreaderPosition, ref dummy, SpreaderSmoothTime, desiredTransform.moveSpeed * 3f);
+        Vector3 newSpreaderPosition = Vector3.MoveTowards(_spreader.localPosition, desiredSpreaderPosition, desiredTransform.moveSpeed * Time.deltaTime);
 
         if (!newTrolleyPosition.IsValid() || !newSpreaderPosition.IsValid())
         {
