@@ -10,7 +10,6 @@ public class LoadGUI : MonoBehaviour
 {
     public string productVersion = "1.0";
     public string hostString = "192.168.137.1:8096";
-
     private LoadObjects LoadObjects;
     
     void Start()

@@ -21,25 +21,20 @@ public class PlacedObject : MonoBehaviour
     public Transform _containerRootObject;
     public ObjectType EquipmentType;
     public bool HasSpreader = false;
-    public float SpreaderSmoothTime = 0.12f;
+    public float SpreaderSmoothTime = 0.001f;
 
     // Use this for initialization
     void Start ()
     {
-        _camera = transform.GetComponentInChildren<Camera>();
-
         if (HasSpreader)
         {
             _trolley = transform.GetChild(0).GetChild(0);
             _spreader = _trolley.GetChild(0).GetChild(0);
         }
-
-        AddCameraToCycler();
     }
 
     void OnDestroy()
     {
-        RemoveCameraFromCycler();
     }
 
     #region Spreader
@@ -238,29 +233,6 @@ public class PlacedObject : MonoBehaviour
 
     #endregion
 
-    #region Camera
-
-    private void AddCameraToCycler()
-    {
-        if (_camera == null)
-            return;
-
-        _camera.name = CameraCycler.CamNamePrefix + name;
-        var cycler = FindObjectOfType<CameraCycler>();
-        cycler.AddCamera(_camera);
-    }
-
-    private void RemoveCameraFromCycler()
-    {
-        if (_camera == null)
-            return;
-
-        var cycler = FindObjectOfType<CameraCycler>();
-        if (cycler != null)
-            cycler.RemoveCamera(transform);
-    }
-
-    #endregion
 
     public bool IsContainer()
     {

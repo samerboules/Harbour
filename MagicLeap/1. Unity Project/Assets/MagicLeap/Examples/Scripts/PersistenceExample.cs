@@ -79,6 +79,7 @@ namespace MagicLeap
         /// </summary>
         void Awake()
         {
+            
             if (_content == null || _content.GetComponent<MLPersistentBehavior>() == null)
             {
                 Debug.LogError("Error: PersistenceExample._content is not set or is missing MLPersistentBehavior behavior, disabling script.");
@@ -129,6 +130,7 @@ namespace MagicLeap
             _privilegeRequester = GetComponent<PrivilegeRequester>();
             _privilegeRequester.OnPrivilegesDone += HandlePrivilegesDone;
             _statusText.text = "Status: Requesting Privileges";
+            
         }
 
         /// <summary>

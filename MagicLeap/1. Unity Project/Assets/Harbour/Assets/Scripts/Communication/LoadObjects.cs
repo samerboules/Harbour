@@ -470,20 +470,8 @@ public class LoadObjects : MonoBehaviour {
 
     private IEnumerator UpdateRenderObjects()
     {
-        bool timeReached = false;
-        // 5ms seems to be enough to render multiple objects at the same time, but not inhibit movement too much
-        int maxTimeInMilliseconds = 5;
-        var timer = new Timer(state => timeReached = true, new object(), maxTimeInMilliseconds, -1);
         foreach (var objectToUpdate in GetObjectList())
         {
-            if (timeReached)
-            {
-                timer.Dispose();
-                yield return null;
-                timeReached = false;
-                timer = new Timer(state => timeReached = true, new object(), maxTimeInMilliseconds, -1);
-            }
-
             if (objectToUpdate.isRemoved)
             {
                 if (objectToUpdate.transform != null)
@@ -491,9 +479,7 @@ public class LoadObjects : MonoBehaviour {
                     Destroy(objectToUpdate.transform.gameObject);
                 }
 
-                lock (lockArray)
-                    objectList.Remove(objectToUpdate.id);
-
+                objectList.Remove(objectToUpdate.id);
             }
             else if (objectToUpdate.transform == null)
             {
@@ -504,8 +490,8 @@ public class LoadObjects : MonoBehaviour {
                 continue;
 
             objectToUpdate.Update();
+            yield return null;
         }
-        timer.Dispose();
     }
 
 
