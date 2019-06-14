@@ -5,14 +5,15 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadGUI : MonoBehaviour
 {
     public string productVersion = "1.0";
-    public string hostString = "192.168.137.1:8096";
+    string hostString;
 
     private LoadObjects LoadObjects;
-    
+    public Text HostStringText;
     void Start()
     {
         LoadObjects = GetComponent<LoadObjects>();
@@ -30,6 +31,14 @@ public class LoadGUI : MonoBehaviour
         if (LoadObjects.Connected)
         {
             CancelInvoke();
+            HostStringText.text = "Connected";
+        }
+        else//Not Connected
+        {
+            GameObject WelcomeScreenManager = GameObject.Find("WelcomeScreenManager");
+            WelcomeScreenScript welcomescreenscript = WelcomeScreenManager.GetComponent<WelcomeScreenScript>();
+            hostString = welcomescreenscript.IPAddress + ":8096";
+            HostStringText.text = "Connecting to: " + hostString;
         }
     }
 }
