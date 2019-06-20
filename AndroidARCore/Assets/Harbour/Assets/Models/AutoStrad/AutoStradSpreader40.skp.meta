@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: 0831a2da17da70647a15ec6bf8de016a
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000200000003000000040000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 1472cb75ed3cbe4e30dcdbd29626e4a3
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 18.549059, y: 6.249956, z: -1.8679925}
+      lookAt: {x: 1.8145379, y: 3.40374, z: -2.8650053}
+      up: {x: -0.16708788, y: 0.98589176, z: -0.009954797}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: carriage
+    100004: carriage 1
+    100006: Centre section
+    100008: chain link#1
+    100010: chain link#1 1
+    100012: chain link#1 2
+    100014: chain link#1 3
+    100016: Component#15
+    100018: Component#15 1
+    100020: Component#18
+    100022: Component#18 1
+    100024: Component#18 2
+    100026: Component#18 3
+    100028: Component#27
+    100030: Component#27 1
+    100032: Component#27 2
+    100034: Component#27 3
+    100036: Component#28
+    100038: Component#28 1
+    100040: Component#29
+    100042: Component#29 1
+    100044: Component#29 2
+    100046: Component#29 3
+    100048: Component#29 4
+    100050: Component#29 5
+    100052: Component#29 6
+    100054: Component#29 7
+    100056: Component#3
+    100058: Component#3 1
+    100060: Component#30
+    100062: Component#30 1
+    100064: Component#30 2
+    100066: Component#30 3
+    100068: Component#30 4
+    100070: Component#30 5
+    100072: Component#30 6
+    100074: Component#30 7
+    100076: Component#32
+    100078: Component#32 1
+    100080: Component#32 2
+    100082: Component#32 3
+    100084: Component#32 4
+    100086: Component#32 5
+    100088: Component#32 6
+    100090: Component#32 7
+    100092: Component#36
+    100094: Component#36 1
+    100096: Component#38
+    100098: Component#38 1
+    100100: Component#38 2
+    100102: Component#38 3
+    100104: Component#4
+    100106: Component#4 1
+    100108: Component#4 2
+    100110: Component#4 3
+    100112: Component#40
+    100114: Component#40 1
+    100116: Component#42
+    100118: Component#42 1
+    100120: Component#43
+    100122: Component#43 1
+    100124: Component#43 2
+    100126: Component#43 3
+    100128: Component#44
+    100130: Component#44 1
+    100132: Component#44 2
+    100134: Component#44 3
+    100136: Component#44 4
+    100138: Component#44 5
+    100140: Component#44 6
+    100142: Component#44 7
+    100144: Component#46
+    100146: Component#46 1
+    100148: Component#46 2
+    100150: Component#46 3
+    100152: Component#47
+    100154: Component#47 1
+    100156: Component#47 2
+    100158: Component#47 3
+    100160: Component#48
+    100162: Component#48 1
+    100164: Group 123
+    100166: Group 150
+    100168: Group 182
+    100170: Group 65
+    100172: Group#2
+    100174: Group#2 1
+    100176: Group#3
+    100178: Group#3 1
+    100180: half CS#1
+    100182: half CS#1 1
+    100184: Hoist
+    100186: shuttle beam
+    100188: shuttle beam 1
+    100190: slew cyl
+    100192: slew cyl 1
+    100194: Slider
+    100196: Slider 1
+    100198: Slider 2
+    100200: Slider 3
+    100202: Spreader
+    100204: Strad
+    100206: T beam
+    100208: T beam 1
+    100210: Tbeam 20
+    100212: Tbeam 20 1
+    100214: twistlock
+    100216: twistlock 1
+    100218: twistlock 2
+    100220: twistlock 3
+    400000: //RootNode
+    400002: carriage
+    400004: carriage 1
+    400006: Centre section
+    400008: chain link#1
+    400010: chain link#1 1
+    400012: chain link#1 2
+    400014: chain link#1 3
+    400016: Component#15
+    400018: Component#15 1
+    400020: Component#18
+    400022: Component#18 1
+    400024: Component#18 2
+    400026: Component#18 3
+    400028: Component#27
+    400030: Component#27 1
+    400032: Component#27 2
+    400034: Component#27 3
+    400036: Component#28
+    400038: Component#28 1
+    400040: Component#29
+    400042: Component#29 1
+    400044: Component#29 2
+    400046: Component#29 3
+    400048: Component#29 4
+    400050: Component#29 5
+    400052: Component#29 6
+    400054: Component#29 7
+    400056: Component#3
+    400058: Component#3 1
+    400060: Component#30
+    400062: Component#30 1
+    400064: Component#30 2
+    400066: Component#30 3
+    400068: Component#30 4
+    400070: Component#30 5
+    400072: Component#30 6
+    400074: Component#30 7
+    400076: Component#32
+    400078: Component#32 1
+    400080: Component#32 2
+    400082: Component#32 3
+    400084: Component#32 4
+    400086: Component#32 5
+    400088: Component#32 6
+    400090: Component#32 7
+    400092: Component#36
+    400094: Component#36 1
+    400096: Component#38
+    400098: Component#38 1
+    400100: Component#38 2
+    400102: Component#38 3
+    400104: Component#4
+    400106: Component#4 1
+    400108: Component#4 2
+    400110: Component#4 3
+    400112: Component#40
+    400114: Component#40 1
+    400116: Component#42
+    400118: Component#42 1
+    400120: Component#43
+    400122: Component#43 1
+    400124: Component#43 2
+    400126: Component#43 3
+    400128: Component#44
+    400130: Component#44 1
+    400132: Component#44 2
+    400134: Component#44 3
+    400136: Component#44 4
+    400138: Component#44 5
+    400140: Component#44 6
+    400142: Component#44 7
+    400144: Component#46
+    400146: Component#46 1
+    400148: Component#46 2
+    400150: Component#46 3
+    400152: Component#47
+    400154: Component#47 1
+    400156: Component#47 2
+    400158: Component#47 3
+    400160: Component#48
+    400162: Component#48 1
+    400164: Group 123
+    400166: Group 150
+    400168: Group 182
+    400170: Group 65
+    400172: Group#2
+    400174: Group#2 1
+    400176: Group#3
+    400178: Group#3 1
+    400180: half CS#1
+    400182: half CS#1 1
+    400184: Hoist
+    400186: shuttle beam
+    400188: shuttle beam 1
+    400190: slew cyl
+    400192: slew cyl 1
+    400194: Slider
+    400196: Slider 1
+    400198: Slider 2
+    400200: Slider 3
+    400202: Spreader
+    400204: Strad
+    400206: T beam
+    400208: T beam 1
+    400210: Tbeam 20
+    400212: Tbeam 20 1
+    400214: twistlock
+    400216: twistlock 1
+    400218: twistlock 2
+    400220: twistlock 3
+    2100000: _defaultMat
+    2100002: '[Color_D01]'
+    2100004: '[Color_004]'
+    2100006: '[Color_006]'
+    2100008: '[Color_003]'
+    2100010: '[Color_005]'
+    2100012: '[Color_002]'
+    2300000: chain link#1
+    2300002: chain link#1 1
+    2300004: chain link#1 2
+    2300006: chain link#1 3
+    2300008: Component#15
+    2300010: Component#15 1
+    2300012: Component#18
+    2300014: Component#18 1
+    2300016: Component#18 2
+    2300018: Component#18 3
+    2300020: Component#27
+    2300022: Component#27 1
+    2300024: Component#27 2
+    2300026: Component#27 3
+    2300028: Component#28
+    2300030: Component#28 1
+    2300032: Component#29
+    2300034: Component#29 1
+    2300036: Component#29 2
+    2300038: Component#29 3
+    2300040: Component#29 4
+    2300042: Component#29 5
+    2300044: Component#29 6
+    2300046: Component#29 7
+    2300048: Component#3
+    2300050: Component#3 1
+    2300052: Component#30
+    2300054: Component#30 1
+    2300056: Component#30 2
+    2300058: Component#30 3
+    2300060: Component#30 4
+    2300062: Component#30 5
+    2300064: Component#30 6
+    2300066: Component#30 7
+    2300068: Component#32
+    2300070: Component#32 1
+    2300072: Component#32 2
+    2300074: Component#32 3
+    2300076: Component#32 4
+    2300078: Component#32 5
+    2300080: Component#32 6
+    2300082: Component#32 7
+    2300084: Component#36
+    2300086: Component#36 1
+    2300088: Component#38
+    2300090: Component#38 1
+    2300092: Component#38 2
+    2300094: Component#38 3
+    2300096: Component#4
+    2300098: Component#4 1
+    2300100: Component#4 2
+    2300102: Component#4 3
+    2300104: Component#40
+    2300106: Component#40 1
+    2300108: Component#42
+    2300110: Component#42 1
+    2300112: Component#43
+    2300114: Component#43 1
+    2300116: Component#43 2
+    2300118: Component#43 3
+    2300120: Component#44
+    2300122: Component#44 1
+    2300124: Component#44 2
+    2300126: Component#44 3
+    2300128: Component#44 4
+    2300130: Component#44 5
+    2300132: Component#44 6
+    2300134: Component#44 7
+    2300136: Component#46
+    2300138: Component#46 1
+    2300140: Component#46 2
+    2300142: Component#46 3
+    2300144: Component#47
+    2300146: Component#47 1
+    2300148: Component#47 2
+    2300150: Component#47 3
+    2300152: Component#48
+    2300154: Component#48 1
+    2300156: Group 182
+    2300158: Group 65
+    2300160: half CS#1
+    2300162: half CS#1 1
+    2300164: shuttle beam
+    2300166: shuttle beam 1
+    2300168: Slider
+    2300170: Slider 1
+    2300172: Slider 2
+    2300174: Slider 3
+    2300176: Tbeam 20
+    2300178: Tbeam 20 1
+    2300180: twistlock
+    2300182: twistlock 1
+    2300184: twistlock 2
+    2300186: twistlock 3
+    3300000: chain link#1
+    3300002: chain link#1 1
+    3300004: chain link#1 2
+    3300006: chain link#1 3
+    3300008: Component#15
+    3300010: Component#15 1
+    3300012: Component#18
+    3300014: Component#18 1
+    3300016: Component#18 2
+    3300018: Component#18 3
+    3300020: Component#27
+    3300022: Component#27 1
+    3300024: Component#27 2
+    3300026: Component#27 3
+    3300028: Component#28
+    3300030: Component#28 1
+    3300032: Component#29
+    3300034: Component#29 1
+    3300036: Component#29 2
+    3300038: Component#29 3
+    3300040: Component#29 4
+    3300042: Component#29 5
+    3300044: Component#29 6
+    3300046: Component#29 7
+    3300048: Component#3
+    3300050: Component#3 1
+    3300052: Component#30
+    3300054: Component#30 1
+    3300056: Component#30 2
+    3300058: Component#30 3
+    3300060: Component#30 4
+    3300062: Component#30 5
+    3300064: Component#30 6
+    3300066: Component#30 7
+    3300068: Component#32
+    3300070: Component#32 1
+    3300072: Component#32 2
+    3300074: Component#32 3
+    3300076: Component#32 4
+    3300078: Component#32 5
+    3300080: Component#32 6
+    3300082: Component#32 7
+    3300084: Component#36
+    3300086: Component#36 1
+    3300088: Component#38
+    3300090: Component#38 1
+    3300092: Component#38 2
+    3300094: Component#38 3
+    3300096: Component#4
+    3300098: Component#4 1
+    3300100: Component#4 2
+    3300102: Component#4 3
+    3300104: Component#40
+    3300106: Component#40 1
+    3300108: Component#42
+    3300110: Component#42 1
+    3300112: Component#43
+    3300114: Component#43 1
+    3300116: Component#43 2
+    3300118: Component#43 3
+    3300120: Component#44
+    3300122: Component#44 1
+    3300124: Component#44 2
+    3300126: Component#44 3
+    3300128: Component#44 4
+    3300130: Component#44 5
+    3300132: Component#44 6
+    3300134: Component#44 7
+    3300136: Component#46
+    3300138: Component#46 1
+    3300140: Component#46 2
+    3300142: Component#46 3
+    3300144: Component#47
+    3300146: Component#47 1
+    3300148: Component#47 2
+    3300150: Component#47 3
+    3300152: Component#48
+    3300154: Component#48 1
+    3300156: Group 182
+    3300158: Group 65
+    3300160: half CS#1
+    3300162: half CS#1 1
+    3300164: shuttle beam
+    3300166: shuttle beam 1
+    3300168: Slider
+    3300170: Slider 1
+    3300172: Slider 2
+    3300174: Slider 3
+    3300176: Tbeam 20
+    3300178: Tbeam 20 1
+    3300180: twistlock
+    3300182: twistlock 1
+    3300184: twistlock 2
+    3300186: twistlock 3
+    4300000: Mesh Tbeam 20
+    4300002: Mesh twistlock
+    4300004: Mesh Component#46
+    4300006: Mesh Component#18
+    4300008: Mesh Component#44
+    4300010: Mesh Component#43
+    4300012: Mesh Component#32
+    4300014: Mesh chain link#1
+    4300016: Mesh shuttle beam
+    4300018: Mesh Component#28
+    4300020: Mesh Component#40
+    4300022: Mesh Group 65
+    4300024: Mesh Component#3
+    4300026: Mesh Slider
+    4300028: Mesh Component#29
+    4300030: Mesh Component#27
+    4300032: Mesh Component#15
+    4300034: Mesh Component#36
+    4300036: Mesh half CS#1
+    4300038: Mesh Component#30
+    4300040: Mesh Component#4
+    4300042: Mesh Component#38
+    4300044: Mesh Component#42
+    4300046: Mesh Component#48
+    4300048: Mesh Component#47
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
