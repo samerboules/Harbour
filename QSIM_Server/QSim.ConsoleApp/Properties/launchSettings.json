@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QSim.ConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "-port=8096"
+    }
+  }
+}
