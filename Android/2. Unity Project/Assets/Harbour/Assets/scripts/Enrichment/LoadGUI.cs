@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class LoadGUI : MonoBehaviour
 {
-    public string productVersion = "1.0";
-    string hostString;
+    public string productVersion = "1.1";
+    string hostString = "ict-ar-harbor.westeurope.cloudapp.azure.com:8096";
 
     private LoadObjects LoadObjects;
     public Text HostStringText;
@@ -35,9 +35,6 @@ public class LoadGUI : MonoBehaviour
         }
         else//Not Connected
         {
-            GameObject WelcomeScreenManager = GameObject.Find("WelcomeScreenManager");
-            WelcomeScreenScript welcomescreenscript = WelcomeScreenManager.GetComponent<WelcomeScreenScript>();
-            hostString = welcomescreenscript.IPAddress + ":8096";
             HostStringText.text = "Connecting to: " + hostString;
         }
     }
