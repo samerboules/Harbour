@@ -126,6 +126,7 @@ namespace QSim.ConsoleApp.Middleware.Scheduling
             try
             {
                 await StartJobs();
+                _stacking.ClearStackingLocations();
             }
             catch (Exception e)
             {

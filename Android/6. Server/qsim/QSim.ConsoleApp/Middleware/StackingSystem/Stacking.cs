@@ -33,6 +33,11 @@ namespace QSim.ConsoleApp.Middleware.StackingSystem
             _log.Debug($"Added {containerLocations.Count} container locations to inventory");
         }
 
+        public void ClearStackingLocations()
+        {
+            InitStackingLocations();
+        }
+
         private ContainerLength DetermineLength(Location location)
         {
             switch (location.locationType)

@@ -127,7 +127,8 @@ namespace QSim.ConsoleApp
             };
 
             await Task.WhenAll(fillStacks);
-            await scheduler.DemoJobs(100);
+
+            while (true) await scheduler.DemoJobs(100);
         }
     }
 }
