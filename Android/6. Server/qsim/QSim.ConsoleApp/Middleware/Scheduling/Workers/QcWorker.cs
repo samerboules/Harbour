@@ -24,6 +24,15 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
         {
             int maxBay = PositionProvider.Bays[qcNumericId - 1] + PositionProvider.QcBayIncrement;
 
+            if (bayId==maxBay)
+            {
+                bayId = PositionProvider.Bays[qcNumericId - 1];
+            }
+
+            try
+            {
+
+            
             while (true)
             {
                 while (!_jobPool.HasDischargeContainersOnDeck(bayId) &&
@@ -47,6 +56,12 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
             }
 
             _log.Info($"No more jobs for {qc.Id}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         private async Task DischargeBay(int bayId)
@@ -58,6 +73,10 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
 
             while (currentJob != null)
             {
+                try
+                {
+
+               
                 await PickupByQc(currentJob.Container, currentJob.CurrentLocation);
 
                 var claimArea = qc.GetQctpClaim();
@@ -88,6 +107,12 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
                 _jobPool.CompleteJobStep(currentJob.JobId, qctpLocation);
 
                 currentJob = _jobPool.GetDischargeQcJob(bayId, qc.Id);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
             }
             _log.Info($"{qc.Id}: Finished discharge on bay {bayId}");
         }

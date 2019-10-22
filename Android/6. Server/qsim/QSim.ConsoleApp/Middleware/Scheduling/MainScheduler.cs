@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using log4net;
+﻿using log4net;
 using QSim.ConsoleApp.DataTypes;
 using QSim.ConsoleApp.Middleware.Scheduling.Workers;
 using QSim.ConsoleApp.Middleware.StackingSystem;
 using QSim.ConsoleApp.Simulators;
 using QSim.ConsoleApp.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace QSim.ConsoleApp.Middleware.Scheduling
 {

@@ -153,7 +153,6 @@ namespace QSim.ConsoleApp.Middleware.StackingSystem
                 return containerLocations.Where(
                     loc => loc.Key.locationType == LocationType.STOWAGE &&
                     (bayId == -1 || loc.Key.major == bayId) &&
-                    loc.Key.major != 15 &&
                     loc.Value.IsOccupied).OrderByDescending(loc => loc.Key.floor);
             }
         }
@@ -244,28 +243,33 @@ namespace QSim.ConsoleApp.Middleware.StackingSystem
         {
             lock (containerLocations)
             {
-                var topLocation = containerLocations
-                    .Where(loc => loc.Value.IsOccupied &&
-                           loc.Key.locationType == locationType &&
-                           ((loc.Key.major == id && locationType == LocationType.STOWAGE) ||
-                            (loc.Key.block == id && locationType == LocationType.YARD)))
-                    .OrderByDescending(loc => loc.Key.floor)
-                    .FirstOrDefault().Key.Copy();
+                    var containersLeft = containerLocations
+                        .Where(loc => loc.Value.IsOccupied &&
+                                      loc.Key.locationType == locationType &&
+                                      ((loc.Key.major == id && locationType == LocationType.STOWAGE) ||
+                                       (loc.Key.block == id && locationType == LocationType.YARD)))
+                        .OrderByDescending(loc => loc.Key.floor)
+                        .ToList();
+                    Location topLocation = null;
 
-                if (topLocation == null)
-                {
-                    return defaultSafeHeight;
-                }
+                    if (containersLeft.Count > 0)
+                    {
+                        topLocation = containersLeft.FirstOrDefault().Key.Copy();
+                    }
 
-                int height = PositionProvider.GetPosition(topLocation).z;
+                    if (topLocation == null)
+                    {
+                        return defaultSafeHeight;
+                    }
 
-                if (locationType == LocationType.STOWAGE)
-                {
-                    topLocation.floor = 3;
-                    height = Math.Max(height, PositionProvider.GetPosition(topLocation).z);
-                }
+                    int height = PositionProvider.GetPosition(topLocation).z;
 
-                return height + (2 * Container.DefaultHeight) + 500;
+                    if (locationType == LocationType.STOWAGE)
+                    {
+                        topLocation.floor = 3;
+                        height = Math.Max(height, PositionProvider.GetPosition(topLocation).z);
+                    }
+                    return height + (2 * Container.DefaultHeight) + 500;
             }
         }
 

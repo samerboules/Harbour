@@ -21,16 +21,17 @@ namespace QSim.ConsoleApp.Utilities
         private const int yardBlockOffset = 34125;
         private const int SC_PARK_Y_OFFSET = 138820;
 
-        public const int ShipBayCount = 18;
-        public const int ShipRowCount = 17;
+        public const int ShipBayCount = 16;
+        public const int ShipRowCount = 12;
         public const int ShipTierCount = 6;
 
-        public const int QcCount = 4;
+        public const int QcCount = 3;
         public const int AscCount = 10;
         public const int ScCount = 5;
         public const int QcBayIncrement = 5;
 
-        public static int[] Bays = new int[] { 1, 5, 10, 16 };
+        public static int[] Bays = new int[] { 1, 5, 12 };
+        public static int[] UnusableBays = new int[] { 10, 11,15 };
 
         private static readonly Dictionary<int, int> AscYardBlocks = new Dictionary<int, int>();
         private static readonly Dictionary<int, int> QcLanePositions = new Dictionary<int, int>
@@ -74,7 +75,7 @@ namespace QSim.ConsoleApp.Utilities
 
             for (int bay = 0; bay < ShipBayCount; bay++)
             {
-                if (bay == 8)
+                if (UnusableBays.Contains(bay+1))
                     continue;
 
                 for (int row = 0; row < ShipRowCount; row++)

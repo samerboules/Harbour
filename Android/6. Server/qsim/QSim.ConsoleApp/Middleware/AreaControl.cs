@@ -82,7 +82,7 @@ namespace QSim.ConsoleApp.Middleware
                     }
                     _areaListLock.Release();
                 }
-                catch(OperationCanceledException)
+                catch(OperationCanceledException e)
                 {
                     _log.Debug($"RequestAccessLocation: CANCELLED waiting on {claimPolygon.ToRectangle()} by {equipmentId}.");
                     _waitingForAccessSemaphores.TryRemove(waitForRelinquishId, out _);

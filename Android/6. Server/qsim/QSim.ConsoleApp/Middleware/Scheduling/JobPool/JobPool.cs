@@ -32,7 +32,10 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.JobPool
 
         public bool AllJobsDone
         {
-            get { return JobList.Count == 0; }
+            get
+            {
+                return JobList.Count == 0;
+            }
         }
 
         public void AddJob(Container container, Location from, LocationType destination)
@@ -45,40 +48,60 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.JobPool
 
         public Job GetDischargeQcJob(int bayId, string equipId)
         {
-            var result = JobList.Where(job =>
-                job.CurrentLocation.major == bayId &&
-                job.CurrentLocation.locationType == LocationType.STOWAGE &&
-                !job.Handling).FirstOrDefault();
+            var result = JobList.Where(job => job != null &&
+                job.CurrentLocation?.major == bayId &&
+                job.CurrentLocation?.locationType == LocationType.STOWAGE &&
+                !job.Handling).ToList().FirstOrDefault();
 
             return SetJobHandling(result, equipId);
         }
 
         public Job GetDischargeAscJob(int ascNumber, string equipId)
         {
-            var result = JobList.Where(job =>
-                job.CurrentLocation.block == ascNumber &&
-                job.CurrentLocation.locationType == LocationType.WSTP &&
-                !job.Handling).FirstOrDefault();
+            try
+            {
+                var result = JobList?.Where(job => job != null &&
+                    job.CurrentLocation?.block == ascNumber &&
+                    job.CurrentLocation?.locationType == LocationType.WSTP &&
+                    !job.Handling).ToList().FirstOrDefault();
+                if (result == null)
+                {
+                    var yard = JobList?.Where(job => job != null &&
+                        job.CurrentLocation?.block == ascNumber &&
+                        job.CurrentLocation?.locationType == LocationType.YARD &&
+                        !job.Handling).ToList().FirstOrDefault();
+                    if (yard != null)
+                        lock (yard)
+                        {
+                            JobList.Remove(yard);
+                        }
+                }
+                return SetJobHandling(result, equipId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
-            return SetJobHandling(result, equipId);
         }
 
         public Job GetDischargeScJob(int qcId, string equipId)
         {
-            var result = JobList.Where(job =>
+            var result = JobList.Where(job => job != null &&
                 job.CurrentLocation.block == qcId &&
                 job.CurrentLocation.locationType == LocationType.QCTP &&
-                !job.Handling).OrderByDescending(job => job.CurrentLocation.floor).FirstOrDefault();
+                !job.Handling).OrderByDescending(job => job.CurrentLocation.floor).ToList().FirstOrDefault();
 
             return SetJobHandling(result, equipId);
         }
 
         public Job GetDischargeScJob(string containerId, string equipId)
         {
-            var result = JobList.Where(job =>
+            var result = JobList.Where(job => job != null &&
                 job.CurrentLocation.locationType == LocationType.QCTP &&
                 job.Container.Number == containerId &&
-                !job.Handling).FirstOrDefault();
+                !job.Handling).ToList().FirstOrDefault();
 
             return SetJobHandling(result, equipId);
         }
@@ -125,36 +148,63 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.JobPool
 
         public bool HasDischargeContainersOnDeck(int bayId)
         {
-            return JobList.Where(job =>
-                job.CurrentLocation.major == bayId &&
-                job.CurrentLocation.locationType == LocationType.STOWAGE &&
-                !job.Handling).Count() > 0;
+            try
+            {
+                return JobList.Where(job => job != null &&
+                           job.CurrentLocation.major == bayId &&
+                           job.CurrentLocation.locationType == LocationType.STOWAGE &&
+                           !job.Handling).ToList().Any();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         private int CountDischargeContainersOnQctp(int qcId)
         {
-            return JobList.Where(job =>
-                job.CurrentLocation.block == qcId &&
-                job.CurrentLocation.locationType == LocationType.QCTP &&
-                !job.Handling).Count();
+            try
+            {
+                return JobList.Where(job => job != null &&
+                    job.CurrentLocation.block == qcId &&
+                    job.CurrentLocation.locationType == LocationType.QCTP &&
+                    !job.Handling).ToList().Count;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         #endregion
 
         public bool CompleteJobStep(string jobId, Location newLocation)
         {
-            var completedJob = JobList.Where(job => job.JobId == jobId).FirstOrDefault();
+            try
+            {
+                var completedJob = JobList.Where(job => job != null && job.JobId == jobId).ToList().FirstOrDefault();
 
-            if (completedJob == null)
-                return false;
+                if (completedJob == null)
+                    return false;
 
-            completedJob.HandledBy = "";
-            completedJob.CurrentLocation = newLocation;
+                completedJob.HandledBy = "";
+                completedJob.CurrentLocation = newLocation;
 
-            if (completedJob.IsFinished)
-                JobList.Remove(completedJob);
+                if (completedJob.IsFinished)
+                    JobList.ToList().Remove(completedJob);
 
-            return true;
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         #region Statistics and output

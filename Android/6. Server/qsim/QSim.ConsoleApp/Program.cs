@@ -1,18 +1,18 @@
 ﻿using log4net;
 using log4net.Config;
-using System;
-using System.IO;
-using System.Reflection;
-using System.Threading.Tasks;
-using System.Linq;
-using System.Collections.Generic;
-using QSim.ConsoleApp.Utilities;
 using QSim.ConsoleApp.Middleware;
 using QSim.ConsoleApp.Middleware.Scheduling;
 using QSim.ConsoleApp.Middleware.Scheduling.JobPool;
 using QSim.ConsoleApp.Middleware.StackingSystem;
 using QSim.ConsoleApp.Simulators;
 using QSim.ConsoleApp.Simulators.SCRouterSystem;
+using QSim.ConsoleApp.Utilities;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace QSim.ConsoleApp
 {
@@ -32,7 +32,8 @@ namespace QSim.ConsoleApp
 
             //check for -port=12345 in args
             var portString = args.FirstOrDefault(arg => arg.StartsWith("-port=", StringComparison.OrdinalIgnoreCase));
-            if (portString == null || portString.Length < 7 || !int.TryParse(portString.Substring(6), out int port) || port < 0)
+            if (portString == null || portString.Length < 7 || !int.TryParse(portString.Substring(6), out int port) ||
+                port < 0)
             {
                 port = 8096; //assign default port instead
             }
@@ -40,7 +41,8 @@ namespace QSim.ConsoleApp
             var bridge = VisualizationBridge.Instance;
             bridge.StartServer(new TcpServer(port));
             _log.Info("Visualization bridge is started.");
-            _log.Info("Press 'g' start the test run, 'a' to show the claimable areas and routes or 'r' to test the routing.");
+            _log.Info(
+                "Press 'g' start the test run, 'a' to show the claimable areas and routes or 'r' to test the routing.");
             var keyStroke = Console.ReadKey(true);
             char testCaseCode = keyStroke.KeyChar;
 
@@ -113,6 +115,7 @@ namespace QSim.ConsoleApp
                             if (value > 0)
                                 scheduler.SetMultiplier(value);
                         }
+
                         break;
                 }
             }
@@ -120,15 +123,20 @@ namespace QSim.ConsoleApp
 
         private static async Task RunDemoJobs(MainScheduler scheduler)
         {
-            Task[] fillStacks = new Task[]
+            while (true)
             {
-                scheduler.RandomFillStack(250),
-                scheduler.RandomFillStowage(250)
-            };
+                Task[] fillStacks = new Task[]
+                {
+                    scheduler.RandomFillStack(0),
+                    scheduler.RandomFillStowage(50)
+                };
 
-            await Task.WhenAll(fillStacks);
+                await Task.WhenAll(fillStacks);
 
-            while (true) await scheduler.DemoJobs(100);
+                await scheduler.DemoJobs(75);
+            }
+           
         }
+
     }
 }

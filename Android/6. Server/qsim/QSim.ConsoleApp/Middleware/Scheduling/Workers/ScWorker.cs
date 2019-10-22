@@ -3,7 +3,6 @@ using QSim.ConsoleApp.Middleware.Scheduling.JobPool;
 using QSim.ConsoleApp.Simulators;
 using QSim.ConsoleApp.Utilities;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
@@ -214,21 +213,57 @@ namespace QSim.ConsoleApp.Middleware.Scheduling.Workers
 
         private async Task<Location> GetWstpLocation(int stackId = -1)
         {
-            Location wstpLocation = _stacking.GetWstpStackingLocation(currentJob.Container.Length, stackId);
-            while (wstpLocation == null)
+            try
             {
-                await Task.Delay((int)(LOOK_FOR_WSTP_DELAY / _multiplier));
-                wstpLocation = _stacking.GetWstpStackingLocation(currentJob.Container.Length, stackId);
+                Location wstpLocation = _stacking.GetWstpStackingLocation(currentJob.Container.Length, stackId);
+                while (wstpLocation == null)
+                {
+                    await Task.Delay((int)(LOOK_FOR_WSTP_DELAY / _multiplier));
+                    wstpLocation = _stacking.GetWstpStackingLocation(currentJob.Container.Length, stackId);
+                }
+
+                return wstpLocation;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
 
-            return wstpLocation;
+        }
+        private async Task<Location> GetWstpLocation(ContainerLength length, int stackId = -1)
+        {
+            try
+            {
+                Location wstpLocation = _stacking.GetWstpStackingLocation(length, stackId);
+                while (wstpLocation == null)
+                {
+                    await Task.Delay((int)(LOOK_FOR_WSTP_DELAY / _multiplier));
+                    wstpLocation = _stacking.GetWstpStackingLocation(length, stackId);
+                }
+
+                return wstpLocation;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
         }
 
         private async Task<Position> GetNearestWstpParkPosition()
         {
             var nearestLocation = PositionProvider.GetNearestLocation(sc.Position, LocationType.WSTP);
-
-            Location loc = await GetWstpLocation(nearestLocation.block);
+            Location loc;
+            if (currentJob == null)
+            {
+                loc = await GetWstpLocation(ContainerLength.LENGTH_40,nearestLocation.block);
+            }
+            else
+            {
+                loc = await GetWstpLocation(nearestLocation.block);
+            }
             _stacking.ResetReservation(loc);
             return GetParkPosition(loc);
         }
