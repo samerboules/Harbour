@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class LoadGUI : MonoBehaviour
 {
     public string productVersion = "1.1";
-    string hostString = "colab-harbor.westeurope.cloudapp.azure.com:8096";
+    string hostString = "ict-ar-harbor.westeurope.cloudapp.azure.com:8096";
 
     private LoadObjects LoadObjects;
     public Text HostStringText;
